@@ -3,7 +3,7 @@ import heroVideo from '../../../assets/SOPORTEC.mp4'
 
 export function Hero() {
   return (
-    <section className="bg-white dark:bg-gray-950 py-16 md:py-24">
+    <section className="bg-white dark:bg-gray-950 pt-16 pb-6 md:pt-24 md:pb-8">
       <div className="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-10 md:gap-16">
 
         {/* Video izquierda */}

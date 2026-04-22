@@ -1,15 +1,28 @@
 import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 
-const clients = [
-  'El Corte Inglés',
-  'Allianz',
-  'HP',
-  'Clínica CCS',
-  'Lindt',
-  'UPS Solidaris',
-  'Andrea Osteofisio',
-  'Clínica de Datos',
+import allianz from '../../../assets/clientes/Allianz-Logo_edited.png'
+import cdedatos from '../../../assets/clientes/Cdedatos.png'
+import fcstore from '../../../assets/clientes/FCStore.png'
+import hp from '../../../assets/clientes/HP.png'
+import ups from '../../../assets/clientes/UPS-4.png'
+import andrea from '../../../assets/clientes/andrea_osteo.png'
+import calesse from '../../../assets/clientes/calessebeach.png'
+import clinicaccs from '../../../assets/clientes/clinicaccs.png'
+import elcorteingles from '../../../assets/clientes/elcorteingles.png'
+import lindt from '../../../assets/clientes/lindt-logo.png'
+
+const logos = [
+  { src: elcorteingles, alt: 'El Corte Inglés' },
+  { src: allianz, alt: 'Allianz' },
+  { src: hp, alt: 'HP' },
+  { src: clinicaccs, alt: 'Clínica CCS' },
+  { src: lindt, alt: 'Lindt' },
+  { src: ups, alt: 'UPS' },
+  { src: andrea, alt: 'Andrea Osteofisio' },
+  { src: cdedatos, alt: 'Clínica de Datos' },
+  { src: fcstore, alt: 'FC Store' },
+  { src: calesse, alt: 'Calesse Beach' },
 ]
 
 export function ClientLogos() {
@@ -23,7 +36,7 @@ export function ClientLogos() {
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.5 }}
-          className="text-center text-sm text-gray-500 dark:text-gray-500 uppercase tracking-widest mb-10 font-medium"
+          className="text-center text-sm text-gray-500 uppercase tracking-widest mb-10 font-medium"
         >
           Empresas que confían en Soportec
         </motion.p>
@@ -32,15 +45,15 @@ export function ClientLogos() {
           initial={{ opacity: 0, y: 10 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="flex flex-wrap justify-center items-center gap-6 md:gap-10"
+          className="grid grid-cols-5 gap-8 md:gap-12 items-center justify-items-center"
         >
-          {clients.map(name => (
-            <div
-              key={name}
-              className="px-5 py-2.5 rounded-lg bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-800 text-gray-600 dark:text-gray-400 text-sm font-medium shadow-sm"
-            >
-              {name}
-            </div>
+          {logos.map(logo => (
+            <img
+              key={logo.alt}
+              src={logo.src}
+              alt={logo.alt}
+              className="h-20 md:h-24 w-full object-contain hover:scale-110 transition-transform duration-300 cursor-pointer"
+            />
           ))}
         </motion.div>
       </div>

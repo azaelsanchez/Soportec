@@ -17,8 +17,8 @@ export function Home() {
 
       <Hero />
       <WhyUs />
-      <ServicesSection />
       <Stats />
+      <ServicesSection />
       <Reviews />
       <ClientLogos />
       <BlogPreview />

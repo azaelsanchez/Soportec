@@ -24,7 +24,7 @@ export function WhyUs() {
   const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section ref={ref} className="py-16 md:py-24 bg-white dark:bg-gray-950">
+    <section ref={ref} className="pt-4 pb-16 md:pb-24 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-5xl mx-auto px-4">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -45,7 +45,7 @@ export function WhyUs() {
           >
             {items.map(item => (
               <div key={item.title} className="flex items-center gap-5">
-                <img src={item.img} alt={item.alt} className="w-12 h-12 object-contain shrink-0" />
+                <img src={item.img} alt={item.alt} className="w-12 h-12 object-contain shrink-0 brightness-0" />
                 <span className="text-lg font-semibold text-gray-900 dark:text-white">{item.title}</span>
               </div>
             ))}
