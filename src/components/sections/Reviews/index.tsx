@@ -22,6 +22,10 @@ const reviews = [
     author: 'Maverick',
     text: 'Rapido y eficiente. Me ayudaron con todos los problemas que tenia con mi portatil, y con otro PC de escritorio.',
   },
+  {
+    author: 'Tatiana Tamasi',
+    text: 'Tenía el ordenador bloqueado y necesitaba solucionarlo con urgencia para poder hacer las facturas de este mes. Miguel atendió rápido, fueron muy eficientes y en poco tiempo dejaron todo funcionando perfectamente. ¡Un servicio de 10! Muy agradecida por la profesionalidad y la rapidez.',
+  },
 ]
 
 function Stars() {

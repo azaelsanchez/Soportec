@@ -6,6 +6,7 @@ import { Stats } from '../components/sections/Stats'
 import { Reviews } from '../components/sections/Reviews'
 import { ClientLogos } from '../components/sections/ClientLogos'
 import { BlogPreview } from '../components/sections/BlogPreview'
+import { ContactSection } from '../components/sections/ContactSection'
 
 export function Home() {
   return (
@@ -22,6 +23,7 @@ export function Home() {
       <Reviews />
       <ClientLogos />
       <BlogPreview />
+      <ContactSection />
     </>
   )
 }

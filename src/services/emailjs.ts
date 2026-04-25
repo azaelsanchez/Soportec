@@ -1,4 +1,4 @@
-import emailjs from 'emailjs-com'
+import emailjs from '@emailjs/browser'
 
 interface ContactForm {
   name: string
@@ -14,6 +14,8 @@ export async function sendContactEmail(data: ContactForm): Promise<void> {
     {
       from_name: data.name,
       from_email: data.email,
+      name: data.name,
+      email: data.email,
       phone: data.phone ?? '',
       message: data.message,
     },

@@ -87,8 +87,16 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 pt-6 border-t border-gray-800 text-sm text-center">
-        © {new Date().getFullYear()} Soportec. Todos los derechos reservados.
+      <div className="max-w-6xl mx-auto px-4 pt-6 border-t border-gray-800 text-sm text-center space-y-1">
+        <p>© {new Date().getFullYear()} Soportec. Todos los derechos reservados.</p>
+        <a
+          href="https://github.com/azaelsanchez"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-white transition-colors block"
+        >
+          Desarrollado por Azael Sánchez
+        </a>
       </div>
     </footer>
   )

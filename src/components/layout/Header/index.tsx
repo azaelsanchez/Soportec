@@ -1,18 +1,32 @@
 import { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom'
 import { useTheme } from '../../../context/ThemeContext'
 import { cn } from '../../../utils/cn'
 
 const navLinks = [
-  { to: '/contacto', label: 'Contacto' },
-  { to: '/mis-trabajos', label: 'Mis trabajos' },
-  { to: '/servicios', label: 'Servicios' },
-  { to: '/blog', label: 'Blog' },
+  { to: '/#contacto', label: 'Contacto', isAnchor: true },
+  { to: '/mis-trabajos', label: 'Mis trabajos', isAnchor: false },
+  { to: '/#servicios', label: 'Servicios', isAnchor: true },
+  { to: '/blog', label: 'Blog', isAnchor: false },
 ]
 
 export function Header() {
   const { isDark, toggle } = useTheme()
   const [menuOpen, setMenuOpen] = useState(false)
+  const location = useLocation()
+  const navigate = useNavigate()
+
+  function handleAnchorClick(e: React.MouseEvent<HTMLAnchorElement>) {
+    e.preventDefault()
+    const id = e.currentTarget.getAttribute('href')?.replace('/#', '') ?? ''
+    if (location.pathname === '/') {
+      document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
+    } else {
+      navigate('/')
+      setTimeout(() => document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' }), 100)
+    }
+    setMenuOpen(false)
+  }
 
   return (
     <header className="sticky top-0 z-50 bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 transition-colors duration-300">
@@ -30,20 +44,31 @@ export function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-6">
-          {navLinks.map(({ to, label }) => (
-            <NavLink
-              key={to}
-              to={to}
-              className={({ isActive }) =>
-                cn(
-                  'text-sm font-medium transition-colors hover:text-blue-600 dark:hover:text-blue-400',
-                  isActive ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'
-                )
-              }
-            >
-              {label}
-            </NavLink>
-          ))}
+          {navLinks.map(({ to, label, isAnchor }) =>
+            isAnchor ? (
+              <a
+                key={to}
+                href={to}
+                onClick={handleAnchorClick}
+                className="text-sm font-medium transition-colors hover:text-blue-600 dark:hover:text-blue-400 text-gray-700 dark:text-gray-300 cursor-pointer"
+              >
+                {label}
+              </a>
+            ) : (
+              <NavLink
+                key={to}
+                to={to}
+                className={({ isActive }) =>
+                  cn(
+                    'text-sm font-medium transition-colors hover:text-blue-600 dark:hover:text-blue-400',
+                    isActive ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'
+                  )
+                }
+              >
+                {label}
+              </NavLink>
+            )
+          )}
         </nav>
 
         <div className="flex items-center gap-2">
@@ -97,21 +122,32 @@ export function Header() {
       {/* Mobile menu */}
       {menuOpen && (
         <div className="md:hidden border-t border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-950 px-4 py-3 flex flex-col gap-3">
-          {navLinks.map(({ to, label }) => (
-            <NavLink
-              key={to}
-              to={to}
-              onClick={() => setMenuOpen(false)}
-              className={({ isActive }) =>
-                cn(
-                  'text-sm font-medium py-1 transition-colors',
-                  isActive ? 'text-blue-600' : 'text-gray-700 dark:text-gray-300'
-                )
-              }
-            >
-              {label}
-            </NavLink>
-          ))}
+          {navLinks.map(({ to, label, isAnchor }) =>
+            isAnchor ? (
+              <a
+                key={to}
+                href={to}
+                onClick={handleAnchorClick}
+                className="text-sm font-medium py-1 text-gray-700 dark:text-gray-300 cursor-pointer"
+              >
+                {label}
+              </a>
+            ) : (
+              <NavLink
+                key={to}
+                to={to}
+                onClick={() => setMenuOpen(false)}
+                className={({ isActive }) =>
+                  cn(
+                    'text-sm font-medium py-1 transition-colors',
+                    isActive ? 'text-blue-600' : 'text-gray-700 dark:text-gray-300'
+                  )
+                }
+              >
+                {label}
+              </NavLink>
+            )
+          )}
           <a
             href="tel:+34653971313"
             className="flex items-center gap-2 bg-yellow-400 text-gray-900 text-sm font-medium px-4 py-2 rounded-lg w-fit"

@@ -1,32 +1,34 @@
-import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
+import { motion, useInView } from 'framer-motion'
 import { useRef } from 'react'
-import { cn } from '../../../utils/cn'
 
 const particulares = [
   { icon: '🖥️', text: 'Reparación y mantenimiento de ordenadores' },
   { icon: '🛡️', text: 'Eliminación de virus y optimización del sistema' },
   { icon: '💾', text: 'Copias de seguridad y recuperación de datos' },
-  { icon: '⚙️', text: 'Instalación y configuración de software y periféricos' },
-  { icon: '📚', text: 'Clases de informática adaptadas a cualquier nivel' },
+  { icon: '💿', text: 'Cambio de disco HDD a SSD' },
+  { icon: '🖨️', text: 'Instalación y configuración de ordenadores e impresoras' },
+  { icon: '🚀', text: 'Puesta en marcha de equipos nuevos' },
+  { icon: '⚙️', text: 'Actualización y mantenimiento de sistemas operativos' },
+  { icon: '📚', text: 'Clases presenciales y online de informática' },
   { icon: '📱', text: 'Asistencia con móviles, tablets y redes Wi-Fi domésticas' },
 ]
 
 const empresas = [
   { icon: '🔧', text: 'Mantenimiento informático preventivo y correctivo' },
-  { icon: '🌐', text: 'Configuración de redes y servidores' },
+  { icon: '🌐', text: 'Configuración de redes, servidores y domótica' },
   { icon: '🔒', text: 'Ciberseguridad y copias de seguridad automatizadas' },
   { icon: '📧', text: 'Correo profesional y herramientas colaborativas con Google Workspace' },
-  { icon: '🖥️', text: 'Soporte remoto y asistencia presencial' },
+  { icon: '🖥️', text: 'Soporte remoto personalizado y asistencia presencial' },
+  { icon: '🌍', text: 'Desarrollo web y posicionamiento SEO' },
 ]
 
-function ServiceList({ items, color }: { items: typeof particulares; color: string }) {
+function ServiceList({ items }: { items: typeof particulares }) {
   return (
     <ul className="space-y-4">
       {items.map(item => (
         <li key={item.text} className="flex items-start gap-3">
           <span className="text-2xl leading-none mt-0.5">{item.icon}</span>
-          <span className={cn('text-gray-700 dark:text-gray-300', color)}>{item.text}</span>
+          <span className="text-gray-700 dark:text-gray-300">{item.text}</span>
         </li>
       ))}
     </ul>
@@ -38,7 +40,7 @@ export function ServicesSection() {
   const isInView = useInView(ref, { once: true, margin: '-80px' })
 
   return (
-    <section ref={ref} className="pt-16 pb-8 md:pt-24 md:pb-10 bg-gray-50 dark:bg-gray-900">
+    <section id="servicios" ref={ref} className="pt-16 pb-8 md:pt-24 md:pb-10 bg-gray-50 dark:bg-gray-900">
       <div className="max-w-6xl mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -47,15 +49,17 @@ export function ServicesSection() {
           className="text-center mb-14"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Servicios
+            Nuestros servicios
           </h2>
-          <p className="text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
-            Soluciones informáticas para particulares y empresas en Valencia.
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto mb-2">
+            En SOPORTEC Valencia ofrecemos servicio premium de soporte técnico a domicilio y en remoto en Valencia y alrededores, mantenimiento especializado para empresas y autónomos y soluciones personalizadas.
+          </p>
+          <p className="text-yellow-600 dark:text-yellow-400 font-semibold">
+            ¡Tu tecnología, siempre en las mejores manos!
           </p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Particulares */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -70,10 +74,9 @@ export function ServicesSection() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white">Particulares</h3>
             </div>
-            <ServiceList items={particulares} color="" />
+            <ServiceList items={particulares} />
           </motion.div>
 
-          {/* Empresas */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
@@ -88,7 +91,7 @@ export function ServicesSection() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 dark:text-white">Empresas</h3>
             </div>
-            <ServiceList items={empresas} color="" />
+            <ServiceList items={empresas} />
           </motion.div>
         </div>
 
@@ -104,7 +107,6 @@ export function ServicesSection() {
             </svg>
             +34 653 971 313
           </a>
-
           <a
             href="https://wa.me/34653971313"
             target="_blank"

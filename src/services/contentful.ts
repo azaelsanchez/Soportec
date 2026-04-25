@@ -1,6 +1,7 @@
 import { createClient, type ContentfulClientApi } from 'contentful'
 import { documentToPlainTextString } from '@contentful/rich-text-plain-text-renderer'
 import { readingTime } from '../utils/readingTime'
+import { contentfulImage } from '../utils/contentfulImage'
 import type { Post } from '../types'
 
 let _client: ContentfulClientApi<undefined> | null = null
@@ -53,7 +54,7 @@ function mapPost(item: any): Post {
     category: fields.category ?? '',
     excerpt: fields.excerpt ?? '',
     coverImage: fields.coverImage?.fields?.file?.url
-      ? `https:${fields.coverImage.fields.file.url}`
+      ? contentfulImage(fields.coverImage.fields.file.url as string, 800)
       : '',
     body: fields.body,
     readingTime: readingTime(bodyText),
