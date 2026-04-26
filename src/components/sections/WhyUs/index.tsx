@@ -45,7 +45,7 @@ export function WhyUs() {
           >
             {items.map(item => (
               <div key={item.title} className="flex items-center gap-5">
-                <img src={item.img} alt={item.alt} className="w-12 h-12 object-contain shrink-0 brightness-0" />
+                <img src={item.img} alt={item.alt} className="w-12 h-12 object-contain shrink-0 brightness-0 dark:brightness-0 dark:invert" />
                 <span className="text-lg font-semibold text-gray-900 dark:text-white">{item.title}</span>
               </div>
             ))}

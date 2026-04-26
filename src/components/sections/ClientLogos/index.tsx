@@ -54,11 +54,12 @@ export function ClientLogos() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label={logo.alt}
+              className="flex items-center justify-center p-2 rounded-xl dark:bg-white dark:p-3 hover:scale-110 transition-transform duration-300"
             >
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className="h-20 md:h-24 w-full object-contain hover:scale-110 transition-transform duration-300"
+                className="h-28 md:h-32 w-full object-contain"
               />
             </a>
           ))}

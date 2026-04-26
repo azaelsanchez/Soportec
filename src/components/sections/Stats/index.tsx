@@ -63,27 +63,30 @@ export function Stats() {
               <img
                 src={logo.src}
                 alt={logo.alt}
-                className={`object-contain hover:scale-110 transition-transform duration-300 ${logo.large ? 'h-16 md:h-20' : 'h-10 md:h-12'}`}
+                className={`object-contain ${logo.large ? 'h-16 md:h-20' : 'h-10 md:h-12'}`}
               />
             )
+            const wrapper = 'flex items-center justify-center rounded-xl dark:bg-white dark:p-2 hover:scale-110 transition-transform duration-300'
             return logo.href ? (
-              <a key={logo.alt} href={logo.href} target="_blank" rel="noopener noreferrer" aria-label={logo.alt}>
+              <a key={logo.alt} href={logo.href} target="_blank" rel="noopener noreferrer" aria-label={logo.alt} className={wrapper}>
                 {img}
               </a>
             ) : (
-              <span key={logo.alt}>{img}</span>
+              <span key={logo.alt} className={wrapper}>{img}</span>
             )
           })}
 
           {/* AnyDesk con Windows y Apple debajo */}
           <div className="flex flex-col items-center gap-2">
-            <img src={anydesk} alt="AnyDesk" className="h-10 md:h-12 object-contain" />
+            <div className="rounded-xl dark:bg-white dark:p-2">
+              <img src={anydesk} alt="AnyDesk" className="h-10 md:h-12 object-contain" />
+            </div>
             <div className="flex gap-3 items-center">
-              <a href="https://anydesk.com/es/downloads/thank-you?dv=win_exe" target="_blank" rel="noopener noreferrer" aria-label="Descargar AnyDesk para Windows">
-                <img src={windows} alt="Windows" className="h-5 md:h-6 object-contain hover:scale-110 transition-transform duration-300" />
+              <a href="https://anydesk.com/es/downloads/thank-you?dv=win_exe" target="_blank" rel="noopener noreferrer" aria-label="Descargar AnyDesk para Windows" className="rounded-lg dark:bg-white dark:p-1 hover:scale-110 transition-transform duration-300">
+                <img src={windows} alt="Windows" className="h-5 md:h-6 object-contain" />
               </a>
-              <a href="https://anydesk.com/en/downloads/thank-you?dv=mac_dmg" target="_blank" rel="noopener noreferrer" aria-label="Descargar AnyDesk para Mac">
-                <img src={apple} alt="Apple" className="h-7 md:h-8 object-contain hover:scale-110 transition-transform duration-300" />
+              <a href="https://anydesk.com/en/downloads/thank-you?dv=mac_dmg" target="_blank" rel="noopener noreferrer" aria-label="Descargar AnyDesk para Mac" className="rounded-lg dark:bg-white dark:p-1 hover:scale-110 transition-transform duration-300">
+                <img src={apple} alt="Apple" className="h-7 md:h-8 object-contain" />
               </a>
             </div>
           </div>
