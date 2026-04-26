@@ -114,6 +114,30 @@ export function BlogPost() {
         <Helmet>
           <title>{post.title} — Soportec Blog</title>
           <meta name="description" content={post.excerpt || `Artículo: ${post.title}`} />
+          <link rel="canonical" href={`https://soportec.es/blog/${post.slug}`} />
+          <meta property="og:type" content="article" />
+          <meta property="og:url" content={`https://soportec.es/blog/${post.slug}`} />
+          <meta property="og:title" content={`${post.title} — Soportec Blog`} />
+          <meta property="og:description" content={post.excerpt || `Artículo: ${post.title}`} />
+          {post.coverImage && <meta property="og:image" content={post.coverImage} />}
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content={`${post.title} — Soportec Blog`} />
+          <meta name="twitter:description" content={post.excerpt || `Artículo: ${post.title}`} />
+          <script type="application/ld+json">{JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BlogPosting',
+            headline: post.title,
+            description: post.excerpt,
+            image: post.coverImage,
+            datePublished: post.date,
+            url: `https://soportec.es/blog/${post.slug}`,
+            author: { '@type': 'Person', name: 'Miguel — Soportec' },
+            publisher: {
+              '@type': 'Organization',
+              name: 'Soportec',
+              url: 'https://soportec.es',
+            },
+          })}</script>
         </Helmet>
       )}
 
