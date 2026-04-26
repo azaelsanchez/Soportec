@@ -7,6 +7,10 @@ import { Blog } from './pages/Blog'
 import { BlogPost } from './pages/BlogPost'
 import { Services } from './pages/Services'
 import { Portfolio } from './pages/Portfolio'
+import { Privacy } from './pages/Privacy'
+import { Accessibility } from './pages/Accessibility'
+import { Terms } from './pages/Terms'
+import { Refund } from './pages/Refund'
 import { NotFound } from './pages/NotFound'
 
 export default function App() {
@@ -21,6 +25,10 @@ export default function App() {
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/servicios" element={<Services />} />
             <Route path="/mis-trabajos" element={<Portfolio />} />
+            <Route path="/privacidad" element={<Privacy />} />
+            <Route path="/accesibilidad" element={<Accessibility />} />
+            <Route path="/terminos" element={<Terms />} />
+            <Route path="/reembolso" element={<Refund />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

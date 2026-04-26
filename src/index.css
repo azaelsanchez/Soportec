@@ -44,6 +44,29 @@
   transform: scale(1.12);
 }
 
+/* Legal pages */
+.legal-content h1 { display: none; } /* title shown in LegalPage header */
+.legal-content h2 {
+  font-size: 1rem; font-weight: 700; color: #111827;
+  margin-top: 2.5rem; margin-bottom: 0.75rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e5e7eb;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.legal-content h2:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+.legal-content h3 { font-size: 0.9rem; font-weight: 700; color: #374151; margin-top: 1.25rem; margin-bottom: 0.4rem; }
+.legal-content p  { color: #4b5563; line-height: 1.8; margin-bottom: 0.75rem; font-size: 0.9rem; }
+.legal-content ul { margin: 0.5rem 0 1rem 0; list-style: none; padding: 0; }
+.legal-content ul li { color: #4b5563; line-height: 1.8; margin-bottom: 0.35rem; font-size: 0.9rem; padding-left: 1.25rem; position: relative; }
+.legal-content ul li::before { content: '·'; position: absolute; left: 0.25rem; color: #f5c518; font-weight: 900; font-size: 1.1rem; line-height: 1.7; }
+.legal-content ol { margin: 0.5rem 0 1rem 1.5rem; }
+.legal-content ol li { color: #4b5563; line-height: 1.8; margin-bottom: 0.35rem; font-size: 0.9rem; }
+.legal-content a  { color: #2563eb; text-decoration: underline; word-break: break-all; }
+.dark .legal-content h2, .dark .legal-content h3 { color: #f9fafb; }
+.dark .legal-content h2 { border-top-color: #374151; }
+.dark .legal-content p, .dark .legal-content li { color: #9ca3af; }
+.dark .legal-content ul li::before { color: #f5c518; }
+
 @layer base {
 :root { --background: oklch(1 0 0); --foreground: oklch(0.145 0 0); --card: oklch(1 0 0); --card-foreground: oklch(0.145 0 0); --popover: oklch(1 0 0); --popover-foreground: oklch(0.145 0 0); --primary: oklch(0.205 0 0); --primary-foreground: oklch(0.985 0 0); --secondary: oklch(0.97 0 0); --secondary-foreground: oklch(0.205 0 0); --muted: oklch(0.97 0 0); --muted-foreground: oklch(0.556 0 0); --accent: oklch(0.97 0 0); --accent-foreground: oklch(0.205 0 0); --destructive: oklch(0.577 0.245 27.325); --border: oklch(0.922 0 0); --input: oklch(0.922 0 0); --ring: oklch(0.708 0 0); --chart-1: oklch(0.87 0 0); --chart-2: oklch(0.556 0 0); --chart-3: oklch(0.439 0 0); --chart-4: oklch(0.371 0 0); --chart-5: oklch(0.269 0 0); --radius: 0.625rem; --sidebar: oklch(0.985 0 0); --sidebar-foreground: oklch(0.145 0 0); --sidebar-primary: oklch(0.205 0 0); --sidebar-primary-foreground: oklch(0.985 0 0); --sidebar-accent: oklch(0.97 0 0); --sidebar-accent-foreground: oklch(0.205 0 0); --sidebar-border: oklch(0.922 0 0); --sidebar-ring: oklch(0.708 0 0);
   }
