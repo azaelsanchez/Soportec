@@ -13,16 +13,16 @@ import elcorteingles from '../../../assets/clientes/elcorteingles.png'
 import lindt from '../../../assets/clientes/lindt-logo.png'
 
 const logos = [
-  { src: elcorteingles, alt: 'El Corte Inglés' },
-  { src: allianz, alt: 'Allianz' },
-  { src: hp, alt: 'HP' },
-  { src: clinicaccs, alt: 'Clínica CCS' },
-  { src: lindt, alt: 'Lindt' },
-  { src: ups, alt: 'UPS' },
-  { src: andrea, alt: 'Andrea Osteofisio' },
-  { src: cdedatos, alt: 'Clínica de Datos' },
-  { src: fcstore, alt: 'FC Store' },
-  { src: calesse, alt: 'Calesse Beach' },
+  { src: elcorteingles, alt: 'El Corte Inglés',         href: 'https://www.elcorteingles.es/' },
+  { src: allianz,       alt: 'Allianz',                  href: 'https://www.allianz.es/' },
+  { src: hp,            alt: 'HP',                       href: 'https://www.hp.com/es-es/shop/' },
+  { src: clinicaccs,    alt: 'Clínica CCS',              href: 'https://clinicaccs.es/' },
+  { src: lindt,         alt: 'Lindt',                    href: 'https://www.lindt.es/' },
+  { src: ups,           alt: 'Unió de Pobles Solidaris', href: 'https://www.upsolidaris.org/' },
+  { src: andrea,        alt: 'Andrea Osteofisio',        href: 'https://andreaosteofisio.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio' },
+  { src: cdedatos,      alt: 'Clínica de Datos',         href: 'https://www.clinica-de-datos.es/' },
+  { src: fcstore,       alt: 'FC Store',                 href: 'https://www.facebook.com/people/Effeci-Store/100054639375991/' },
+  { src: calesse,       alt: 'Calesse Beach',            href: 'http://www.spiaggesestrilevante.it/' },
 ]
 
 export function ClientLogos() {
@@ -48,12 +48,19 @@ export function ClientLogos() {
           className="grid grid-cols-5 gap-8 md:gap-12 items-center justify-items-center"
         >
           {logos.map(logo => (
-            <img
+            <a
               key={logo.alt}
-              src={logo.src}
-              alt={logo.alt}
-              className="h-20 md:h-24 w-full object-contain hover:scale-110 transition-transform duration-300 cursor-pointer"
-            />
+              href={logo.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={logo.alt}
+            >
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className="h-20 md:h-24 w-full object-contain hover:scale-110 transition-transform duration-300"
+              />
+            </a>
           ))}
         </motion.div>
       </div>

@@ -17,12 +17,9 @@ const stats = [
 ]
 
 const logos = [
-  { src: cdedatos, alt: 'Clínica de Datos', large: true },
-  { src: anydesk, alt: 'AnyDesk', large: false },
-  { src: microsoft365, alt: 'Microsoft 365', large: false },
-  { src: nordvpn, alt: 'NordVPN', large: false },
-  { src: windows, alt: 'Windows', large: false },
-  { src: apple, alt: 'Apple', large: false },
+  { src: cdedatos,    alt: 'Clínica de Datos', large: true,  href: 'https://www.clinica-de-datos.es/' },
+  { src: microsoft365, alt: 'Microsoft 365',   large: false, href: 'https://www.microsoft.com/es-es/microsoft-365/buy/compare-all-microsoft-365-products' },
+  { src: nordvpn,     alt: 'NordVPN',          large: false, href: 'https://nordvpn.com/es/refer-a-friend/referred/' },
 ]
 
 function StatItem({ value, suffix, label }: { value: number; suffix: string; label: string }) {
@@ -61,14 +58,35 @@ export function Stats() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="flex flex-wrap justify-center items-center gap-8 md:gap-12"
         >
-          {logos.map(logo => (
-            <img
-              key={logo.alt}
-              src={logo.src}
-              alt={logo.alt}
-              className={`object-contain hover:scale-110 transition-transform duration-300 cursor-pointer ${logo.large ? 'h-16 md:h-20' : 'h-10 md:h-12'}`}
-            />
-          ))}
+          {logos.map(logo => {
+            const img = (
+              <img
+                src={logo.src}
+                alt={logo.alt}
+                className={`object-contain hover:scale-110 transition-transform duration-300 ${logo.large ? 'h-16 md:h-20' : 'h-10 md:h-12'}`}
+              />
+            )
+            return logo.href ? (
+              <a key={logo.alt} href={logo.href} target="_blank" rel="noopener noreferrer" aria-label={logo.alt}>
+                {img}
+              </a>
+            ) : (
+              <span key={logo.alt}>{img}</span>
+            )
+          })}
+
+          {/* AnyDesk con Windows y Apple debajo */}
+          <div className="flex flex-col items-center gap-2">
+            <img src={anydesk} alt="AnyDesk" className="h-10 md:h-12 object-contain" />
+            <div className="flex gap-3 items-center">
+              <a href="https://anydesk.com/es/downloads/thank-you?dv=win_exe" target="_blank" rel="noopener noreferrer" aria-label="Descargar AnyDesk para Windows">
+                <img src={windows} alt="Windows" className="h-5 md:h-6 object-contain hover:scale-110 transition-transform duration-300" />
+              </a>
+              <a href="https://anydesk.com/en/downloads/thank-you?dv=mac_dmg" target="_blank" rel="noopener noreferrer" aria-label="Descargar AnyDesk para Mac">
+                <img src={apple} alt="Apple" className="h-7 md:h-8 object-contain hover:scale-110 transition-transform duration-300" />
+              </a>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
