@@ -8,7 +8,7 @@ export default defineConfig({
     react(),
     sitemap({
       hostname: 'https://soportec.es',
-      routes: ['/', '/blog', '/servicios', '/mis-trabajos'],
+      dynamicRoutes: ['/', '/blog', '/servicios', '/mis-trabajos'],
     }),
   ],
   resolve: {

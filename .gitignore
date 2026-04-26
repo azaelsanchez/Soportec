@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+# Blog seed images (already uploaded to Contentful CDN)
+src/assets/blog/
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
