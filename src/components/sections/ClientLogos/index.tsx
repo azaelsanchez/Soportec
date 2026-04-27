@@ -22,7 +22,7 @@ const logos = [
   { src: andrea,        alt: 'Andrea Osteofisio',        href: 'https://andreaosteofisio.com/?utm_source=ig&utm_medium=social&utm_content=link_in_bio' },
   { src: cdedatos,      alt: 'Clínica de Datos',         href: 'https://www.clinica-de-datos.es/' },
   { src: fcstore,       alt: 'FC Store',                 href: 'https://www.facebook.com/people/Effeci-Store/100054639375991/' },
-  { src: calesse,       alt: 'Calesse Beach',            href: 'http://www.spiaggesestrilevante.it/' },
+  { src: calesse,       alt: 'Calesse Beach',            href: 'https://www.spiaggesestrilevante.it/' },
 ]
 
 export function ClientLogos() {
@@ -59,6 +59,7 @@ export function ClientLogos() {
               <img
                 src={logo.src}
                 alt={logo.alt}
+                loading="lazy"
                 className="h-28 md:h-32 w-full object-contain"
               />
             </a>

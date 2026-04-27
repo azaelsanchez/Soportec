@@ -7,6 +7,8 @@ export function NotFound() {
     <>
       <Helmet>
         <title>Página no encontrada — Soportec</title>
+        <meta name="description" content="Esta página no existe o ha sido movida. Vuelve al inicio de Soportec." />
+        <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <div className="min-h-[80vh] flex flex-col items-center justify-center px-4 text-center">
         <motion.div

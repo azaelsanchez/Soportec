@@ -121,7 +121,7 @@ Puedes ejercer en cualquier momento los siguientes derechos:</p>
 </li>
 </ul>
 
-<p>Para ejercer estos derechos, envía un correo electrónico a [<a href="mailto:tuemail@empresa.com">tuemail@empresa.com</a>], adjuntando una copia de tu DNI o documento identificativo.</p>
+<p>Para ejercer estos derechos, envía un correo electrónico a <a href="mailto:miguel.soportec@outlook.com">miguel.soportec@outlook.com</a>, adjuntando una copia de tu DNI o documento identificativo.</p>
 
 <p>También puedes presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) si consideras que no hemos respetado tus derechos.</p>
 

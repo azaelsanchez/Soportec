@@ -63,6 +63,7 @@ export function Stats() {
               <img
                 src={logo.src}
                 alt={logo.alt}
+                loading="lazy"
                 className={`object-contain ${logo.large ? 'h-16 md:h-20' : 'h-10 md:h-12'}`}
               />
             )

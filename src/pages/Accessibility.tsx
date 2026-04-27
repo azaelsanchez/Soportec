@@ -35,7 +35,7 @@ El contenido que se indica a continuación no es accesible por lo siguiente:</p>
 </ul>
 
 <p>Preparación de la presente declaración de accesibilidad
-Esta declaración fue preparada el [fecha], mediante una autoevaluación realizada por el propio titular del sitio web.</p>
+Esta declaración fue preparada el 27 de abril de 2026, mediante una autoevaluación realizada por el propio titular del sitio web.</p>
 
 <p>Observaciones y datos de contacto
 Si encuentras barreras de acceso o quieres realizar alguna sugerencia para mejorar la accesibilidad de este sitio web, puedes ponerte en contacto con nosotros a través de:

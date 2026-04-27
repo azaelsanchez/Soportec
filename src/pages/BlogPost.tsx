@@ -34,12 +34,12 @@ const richTextOptions: Options = {
       <h4 className="text-lg font-bold text-gray-900 dark:text-white mt-5 mb-2">{children}</h4>
     ),
     [BLOCKS.UL_LIST]: (_, children) => (
-      <ul className="list-disc list-inside mb-5 space-y-1 text-gray-700 dark:text-gray-300">{children}</ul>
+      <ul className="list-disc pl-6 mb-5 space-y-2 text-gray-700 dark:text-gray-300">{children}</ul>
     ),
     [BLOCKS.OL_LIST]: (_, children) => (
-      <ol className="list-decimal list-inside mb-5 space-y-1 text-gray-700 dark:text-gray-300">{children}</ol>
+      <ol className="list-decimal pl-6 mb-5 space-y-2 text-gray-700 dark:text-gray-300">{children}</ol>
     ),
-    [BLOCKS.LIST_ITEM]: (_, children) => <li className="leading-relaxed">{children}</li>,
+    [BLOCKS.LIST_ITEM]: (_, children) => <li className="leading-relaxed pl-1">{children}</li>,
     [BLOCKS.QUOTE]: (_, children) => (
       <blockquote className="border-l-4 border-yellow-400 pl-4 my-6 italic text-gray-600 dark:text-gray-400">
         {children}
@@ -194,6 +194,7 @@ export function BlogPost() {
                     <img
                       src={post.coverImage}
                       alt={post.title}
+                      loading="eager"
                       className="w-full h-full object-cover"
                     />
                   </div>

@@ -44,6 +44,12 @@
   transform: scale(1.12);
 }
 
+/* Blog post rich text — fix list items where Contentful wraps text in <p> inside <li> */
+.prose-custom li > p {
+  display: inline;
+  margin-bottom: 0;
+}
+
 /* Legal pages */
 .legal-content h1 { display: none; } /* title shown in LegalPage header */
 .legal-content h2 {

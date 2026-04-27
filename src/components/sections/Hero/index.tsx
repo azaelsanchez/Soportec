@@ -20,6 +20,7 @@ export function Hero() {
             muted
             playsInline
             className="w-full object-contain"
+            aria-label="Vídeo de presentación de Soportec, técnico informático en Valencia"
           />
         </motion.div>
 
