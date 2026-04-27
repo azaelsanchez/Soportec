@@ -143,11 +143,11 @@ export function ContactSection() {
               />
             </div>
 
-            {/* Fila inferior — columna en móvil, fila en sm+ */}
-            <div className="pt-1 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            {/* Fila inferior */}
+            <div className="pt-1 flex flex-col items-center gap-3 sm:flex-row sm:items-center sm:justify-between">
 
-              {/* Contacto: email arriba, botones debajo en móvil */}
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-4">
+              {/* Email + iconos en la misma línea */}
+              <div className="flex items-center gap-3 flex-wrap justify-center sm:justify-start">
                 <a href="mailto:miguel@soportec.eu" className="flex items-center gap-2 text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors text-sm font-bold">
                   <svg className="w-4 h-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -155,34 +155,33 @@ export function ContactSection() {
                   miguel@soportec.eu
                 </a>
 
-                <div className="flex items-center gap-3 flex-wrap">
-                  <a href="tel:+34653971313" className="btn-phone">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                    </svg>
-                    +34 653 971 313
-                  </a>
+                <a href="tel:+34653971313" aria-label="Llamar a Soportec" className="btn-phone px-3 sm:px-6">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  <span className="hidden sm:inline">+34 653 971 313</span>
+                </a>
 
-                  <a
-                    href="https://wa.me/34653971313"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn-whatsapp inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-6 py-3 rounded-lg text-base whitespace-nowrap transition-colors"
-                  >
-                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-                      <path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.878-1.417A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.522 2 11.999 2zm0 18.182a8.172 8.172 0 01-4.162-1.138l-.299-.177-3.086.896.928-3.002-.195-.308A8.17 8.17 0 013.818 12c0-4.514 3.668-8.182 8.182-8.182S20.182 7.486 20.182 12s-3.668 8.182-8.183 8.182z"/>
-                    </svg>
-                    WhatsApp
-                  </a>
-                </div>
+                <a
+                  href="https://wa.me/34653971313"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Contactar por WhatsApp"
+                  className="btn-whatsapp inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-3 sm:px-6 py-3 rounded-lg transition-colors"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                    <path d="M11.999 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.878-1.417A9.953 9.953 0 0012 22c5.523 0 10-4.477 10-10S17.522 2 11.999 2zm0 18.182a8.172 8.172 0 01-4.162-1.138l-.299-.177-3.086.896.928-3.002-.195-.308A8.17 8.17 0 013.818 12c0-4.514 3.668-8.182 8.182-8.182S20.182 7.486 20.182 12s-3.668 8.182-8.183 8.182z"/>
+                  </svg>
+                  <span className="hidden sm:inline">WhatsApp</span>
+                </a>
               </div>
 
-              {/* Enviar — ancho completo en móvil */}
+              {/* Enviar — compacto */}
               <button
                 type="submit"
                 disabled={status === 'loading'}
-                className="w-full sm:w-auto bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold px-10 py-3 rounded transition-colors relative inline-flex items-center justify-center shrink-0"
+                className="bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 disabled:opacity-60 disabled:cursor-not-allowed text-white font-semibold px-8 py-2.5 rounded transition-colors relative inline-flex items-center justify-center shrink-0"
               >
                 <span className="inline-flex items-center gap-2 invisible">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" /></svg>

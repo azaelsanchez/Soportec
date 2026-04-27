@@ -45,7 +45,7 @@ export function ClientLogos() {
           initial={{ opacity: 0, y: 10 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="grid grid-cols-5 gap-8 md:gap-12 items-center justify-items-center"
+          className="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-12 items-center justify-items-center"
         >
           {logos.map(logo => (
             <a
