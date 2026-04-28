@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [
     react(),
     sitemap({
-      hostname: 'https://soportec.es',
+      hostname: 'https://soportecvalencia.es',
       dynamicRoutes: ['/', '/blog', '/servicios', '/mis-trabajos'],
     }),
   ],

@@ -32,12 +32,12 @@ export function Blog() {
       <Helmet>
         <title>Blog — Soportec | Técnico Informático en Valencia</title>
         <meta name="description" content="Artículos y consejos de informática para particulares y empresas en Valencia. Aprende sobre mantenimiento, seguridad, reparación y más." />
-        <link rel="canonical" href="https://soportec.es/blog" />
+        <link rel="canonical" href="https://soportecvalencia.es/blog" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://soportec.es/blog" />
+        <meta property="og:url" content="https://soportecvalencia.es/blog" />
         <meta property="og:title" content="Blog — Soportec | Técnico Informático en Valencia" />
         <meta property="og:description" content="Artículos y consejos de informática para particulares y empresas en Valencia." />
-        <meta property="og:image" content="https://soportec.es/favicon.png" />
+        <meta property="og:image" content="https://soportecvalencia.es/favicon.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Blog — Soportec | Técnico Informático en Valencia" />
         <meta name="twitter:description" content="Artículos y consejos de informática para particulares y empresas en Valencia." />

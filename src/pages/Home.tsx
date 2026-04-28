@@ -13,15 +13,28 @@ const jsonLd = {
   '@type': 'LocalBusiness',
   name: 'Soportec',
   description: 'Servicio técnico informático en Valencia para particulares y empresas. Reparación de ordenadores, redes, mantenimiento y más.',
-  url: 'https://soportec.es',
+  url: 'https://soportecvalencia.es',
   telephone: '+34653971313',
   email: 'miguel@soportec.eu',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Valencia',
+    addressRegion: 'Comunitat Valenciana',
     addressCountry: 'ES',
   },
-  areaServed: 'Valencia',
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 39.4699,
+    longitude: -0.3763,
+  },
+  areaServed: [
+    'Valencia',
+    'Burjassot', 'Paterna', 'Manises', 'Mislata', 'Quart de Poblet', 'Aldaia', 'Alaquàs', 'Xirivella',
+    'Moncada', 'Alboraia', 'Tavernes Blanques', 'Bonrepòs i Mirambell', 'Foios', 'Meliana', 'Godella',
+    'Torrent', 'Paiporta', 'Picanya', 'Catarroja', 'Massanassa', 'Alfafar', 'Sedaví', 'Benetússer',
+    'Sagunto', 'Puçol', 'El Puig de Santa Maria',
+    'Alzira', 'Cullera', 'Sueca',
+  ],
   priceRange: '€€',
   sameAs: [
     'https://www.instagram.com/soportec.valencia',
@@ -35,12 +48,12 @@ export function Home() {
       <Helmet>
         <title>Soportec — Técnico Informático en Valencia</title>
         <meta name="description" content="Servicio técnico informático en Valencia para particulares y empresas. Reparación de ordenadores, redes, mantenimiento y más. Más de 10 años de experiencia." />
-        <link rel="canonical" href="https://soportec.es/" />
+        <link rel="canonical" href="https://soportecvalencia.es/" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://soportec.es/" />
+        <meta property="og:url" content="https://soportecvalencia.es/" />
         <meta property="og:title" content="Soportec — Técnico Informático en Valencia" />
         <meta property="og:description" content="Servicio técnico informático en Valencia para particulares y empresas. Reparación de ordenadores, redes, mantenimiento y más." />
-        <meta property="og:image" content="https://soportec.es/favicon.png" />
+        <meta property="og:image" content="https://soportecvalencia.es/favicon.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Soportec — Técnico Informático en Valencia" />
         <meta name="twitter:description" content="Servicio técnico informático en Valencia para particulares y empresas." />

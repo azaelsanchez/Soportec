@@ -114,9 +114,9 @@ export function BlogPost() {
         <Helmet>
           <title>{post.title} — Soportec Blog</title>
           <meta name="description" content={post.excerpt || `Artículo: ${post.title}`} />
-          <link rel="canonical" href={`https://soportec.es/blog/${post.slug}`} />
+          <link rel="canonical" href={`https://soportecvalencia.es/blog/${post.slug}`} />
           <meta property="og:type" content="article" />
-          <meta property="og:url" content={`https://soportec.es/blog/${post.slug}`} />
+          <meta property="og:url" content={`https://soportecvalencia.es/blog/${post.slug}`} />
           <meta property="og:title" content={`${post.title} — Soportec Blog`} />
           <meta property="og:description" content={post.excerpt || `Artículo: ${post.title}`} />
           {post.coverImage && <meta property="og:image" content={post.coverImage} />}
@@ -130,12 +130,12 @@ export function BlogPost() {
             description: post.excerpt,
             image: post.coverImage,
             datePublished: post.date,
-            url: `https://soportec.es/blog/${post.slug}`,
+            url: `https://soportecvalencia.es/blog/${post.slug}`,
             author: { '@type': 'Person', name: 'Miguel — Soportec' },
             publisher: {
               '@type': 'Organization',
               name: 'Soportec',
-              url: 'https://soportec.es',
+              url: 'https://soportecvalencia.es',
             },
           })}</script>
         </Helmet>

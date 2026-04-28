@@ -192,12 +192,12 @@ export function Portfolio() {
       <Helmet>
         <title>Mis trabajos — Soportec | Técnico Informático en Valencia</title>
         <meta name="description" content="Casos reales de reparación, mantenimiento y recuperación de datos realizados por Soportec en Valencia. Resultados reales, clientes satisfechos." />
-        <link rel="canonical" href="https://soportec.es/mis-trabajos" />
+        <link rel="canonical" href="https://soportecvalencia.es/mis-trabajos" />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://soportec.es/mis-trabajos" />
+        <meta property="og:url" content="https://soportecvalencia.es/mis-trabajos" />
         <meta property="og:title" content="Mis trabajos — Soportec | Técnico Informático en Valencia" />
         <meta property="og:description" content="Casos reales de reparación, mantenimiento y recuperación de datos realizados por Soportec en Valencia." />
-        <meta property="og:image" content="https://soportec.es/favicon.png" />
+        <meta property="og:image" content="https://soportecvalencia.es/favicon.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Mis trabajos — Soportec" />
         <meta name="twitter:description" content="Casos reales de reparación, mantenimiento y recuperación de datos realizados por Soportec en Valencia." />
