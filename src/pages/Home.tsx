@@ -14,7 +14,7 @@ const jsonLd = {
   name: 'Soportec',
   description: 'Servicio técnico informático en Valencia para particulares y empresas. Reparación de ordenadores, redes, mantenimiento y más.',
   url: 'https://soportecvalencia.es',
-  telephone: '+34653971313',
+  telephone: '+34628110705',
   email: 'miguel@soportec.eu',
   address: {
     '@type': 'PostalAddress',

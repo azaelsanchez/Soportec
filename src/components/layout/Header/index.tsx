@@ -115,7 +115,7 @@ export function Header() {
 
           {/* Call CTA — siempre visible, texto solo en sm+ */}
           <a
-            href="tel:+34653971313"
+            href="tel:+34628110705"
             aria-label="Llamar a Soportec"
             className="flex items-center gap-1.5 bg-yellow-400 hover:bg-yellow-500 text-gray-900 text-sm font-medium px-2 sm:px-4 py-2 rounded-lg transition-colors"
           >
