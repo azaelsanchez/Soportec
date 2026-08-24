@@ -52,10 +52,10 @@ export function Blog() {
             className="mb-12 text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3">
-              Blog
+              Blog de informática en Valencia
             </h1>
             <p className="text-gray-600 dark:text-gray-400 text-lg">
-              Consejos y noticias del mundo informático
+              Consejos, guías y noticias de informática para particulares y empresas
             </p>
           </motion.div>
 

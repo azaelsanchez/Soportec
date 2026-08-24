@@ -212,10 +212,10 @@ export function Portfolio() {
             className="mb-12"
           >
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3">
-              Mis trabajos
+              Trabajos de reparación informática en Valencia
             </h1>
-            <p className="text-gray-600 dark:text-gray-400 max-w-xl">
-              Aquí comparto algunos de los trabajos que he realizado para mis clientes. Me gusta que cada servicio deje a la gente tranquila, con su equipo funcionando como nuevo y sin complicaciones.
+            <p className="text-gray-600 dark:text-gray-400">
+              Casos reales de reparación informática, recuperación de datos y soporte técnico en Valencia. Me gusta que cada servicio deje a la gente tranquila, con su equipo funcionando como nuevo y sin complicaciones.
             </p>
           </motion.div>
 
