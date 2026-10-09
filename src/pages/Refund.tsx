@@ -7,7 +7,7 @@ export function Refund() {
       <Helmet>
         <title>Política de Reembolso — Soportec</title>
         <meta name="description" content="Condiciones de devolución y reembolso de los servicios contratados." />
-        <link rel="canonical" href="https://soportec.es/reembolso" />
+        <link rel="canonical" href="https://soportecvalencia.es/reembolso" />
       </Helmet>
       <LegalPage
         title="Política de Reembolso"

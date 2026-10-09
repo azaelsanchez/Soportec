@@ -7,7 +7,7 @@ export function Privacy() {
       <Helmet>
         <title>Política de Privacidad — Soportec</title>
         <meta name="description" content="Cómo tratamos y protegemos tus datos personales en Soportec." />
-        <link rel="canonical" href="https://soportec.es/privacidad" />
+        <link rel="canonical" href="https://soportecvalencia.es/privacidad" />
       </Helmet>
       <LegalPage
         title="Política de Privacidad"

@@ -7,7 +7,7 @@ export function Terms() {
       <Helmet>
         <title>Términos y Condiciones — Soportec</title>
         <meta name="description" content="Condiciones legales de uso de los servicios de Soportec." />
-        <link rel="canonical" href="https://soportec.es/terminos" />
+        <link rel="canonical" href="https://soportecvalencia.es/terminos" />
       </Helmet>
       <LegalPage
         title="Términos y Condiciones"

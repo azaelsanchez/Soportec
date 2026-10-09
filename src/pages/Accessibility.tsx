@@ -7,7 +7,7 @@ export function Accessibility() {
       <Helmet>
         <title>Declaración de Accesibilidad — Soportec</title>
         <meta name="description" content="Compromiso de Soportec con la accesibilidad universal de su sitio web." />
-        <link rel="canonical" href="https://soportec.es/accesibilidad" />
+        <link rel="canonical" href="https://soportecvalencia.es/accesibilidad" />
       </Helmet>
       <LegalPage
         title="Declaración de Accesibilidad"

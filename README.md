@@ -3,7 +3,7 @@
 Web corporativa para **Soportec**, técnico informático a domicilio en Valencia. Proyecto real de cliente y pieza de portfolio del desarrollador.
 
 **Web original:** [Wix → migrada a esta stack](https://titlesitio.wixsite.com/soportec)  
-**Producción:** [soportec.es](https://soportec.es)
+**Producción:** [soportecvalencia.es](https://soportecvalencia.es)
 
 ---
 
@@ -87,7 +87,7 @@ VITE_CONTENTFUL_ACCESS_TOKEN=tu_delivery_token
 VITE_EMAILJS_SERVICE_ID=tu_service_id
 VITE_EMAILJS_TEMPLATE_ID=tu_template_id
 VITE_EMAILJS_PUBLIC_KEY=tu_public_key
-VITE_SITE_URL=https://soportec.es
+VITE_SITE_URL=https://soportecvalencia.es
 ```
 
 El archivo `.env.example` documenta las claves disponibles (sin valores reales).
